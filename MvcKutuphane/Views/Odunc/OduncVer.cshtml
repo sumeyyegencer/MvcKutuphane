@@ -1,0 +1,53 @@
+﻿@model MvcKutuphane.Models.Entity.TBLHAREKET
+@{
+    ViewBag.Title = "OduncVer";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Odunc Ver</h2>
+
+<form method="post">
+    <div style="margin-top:5px;">
+
+
+        <div class="form-row">
+
+            <div class="form-group col-md-6">
+
+                <label>ÜYE ID</label>
+                @Html.TextBoxFor(k => k.UYE, new { @class = "form-control" })
+
+
+            </div>
+            <div class="form-group col-md-6">
+
+                <label>Kitap ID :</label>
+                @Html.TextBoxFor(k => k.KITAP, new { @class = "form-control" })
+
+            </div>
+
+            <div class="form-group col-md-6">
+
+                <label>Personel ID :</label>
+                @Html.TextBoxFor(k => k.PERSONEL, new { @class = "form-control" })
+
+            </div>
+            <div class="form-group col-md-6">
+
+                <label>Kitap Alış Tarihi:</label>
+               <input type="text" class="form-control"  name="ALISTARİH" value="@DateTime.Now.ToShortDateString()"  />
+
+            </div>
+            <div class="form-group col-md-6">
+
+                <label>Kitap İade Tarihi :</label>
+                <input type="text" class="form-control" name="IADETARİH" value="@DateTime.Now.AddDays(7).ToShortDateString()" />
+
+
+            </div>
+
+        </div>
+
+        <button class="btn btn-success"> Kitabı Ödünç Ver</button>
+    </div>
+</form>

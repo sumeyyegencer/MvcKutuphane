@@ -1,0 +1,58 @@
+﻿@model MvcKutuphane.Models.Entity.TBLKITAP
+@{
+    ViewBag.Title = "KitapEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<form method="post">
+    <div class="container" style="margin-top:5px;">
+
+       
+        <div class="form-row">
+
+            <h2>Yeni Kitap Ekle</h2>
+
+            <div class="form-group col-md-6">
+
+                <label>Kitap Adı:</label>
+                @Html.TextBoxFor(k => k.AD, new { @class = "form-control" })
+
+
+            </div>
+            <div class="form-group col-md-6">
+
+                <label>Kitap Kategori :</label>
+                @Html.DropDownListFor(k=> k.TBLKATEGORI.ID, (List<SelectListItem>)ViewBag.dgr1, new {@class= "form-control"})
+
+            </div>
+
+            <div class="form-group col-md-6">
+
+                <label>Kitap Yazarı :</label>
+                @Html.DropDownListFor(k=>k.TBLYAZAR.ID, (List<SelectListItem>)ViewBag.dgr2, new { @class="form-control"})
+
+            </div>
+            <div class="form-group col-md-6">
+
+                <label>Basım Yılı :</label>
+                @Html.TextBoxFor(k => k.BASIMYIL, new { @class = "form-control" })
+
+            </div>
+            <div class="form-group col-md-6">
+
+                <label>Sayfa Sayısı :</label>
+                @Html.TextBoxFor(k => k.SAYFA, new { @class = "form-control" })
+
+            </div>
+
+            <div class="form-group col-md-6">
+
+                <label>Yayınevi:</label>
+                @Html.TextBoxFor(k => k.YAYINEVI, new { @class = "form-control" })
+
+            </div>
+        </div>
+
+        <button class="btn btn-success"> KİTAP EKLE</button>
+    </div>
+</form>
