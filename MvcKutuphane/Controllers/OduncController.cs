@@ -34,5 +34,23 @@ namespace MvcKutuphane.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public ActionResult OduncIade(int id)
+        {
+            var odn = db.TBLHAREKET.Find(id);
+            return View("OduncIade",odn);
+        }
+
+        public ActionResult OduncGuncelle(TBLHAREKET p)
+        {
+            var hrk = db.TBLHAREKET.Find(p.ID);
+            hrk.UYETESLIMTARIH = p.UYETESLIMTARIH;
+            hrk.ISLEMDURUM = true;
+
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+
+        }
     }
 }

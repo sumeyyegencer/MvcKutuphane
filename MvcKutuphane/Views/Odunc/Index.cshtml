@@ -1,7 +1,9 @@
 ﻿@using MvcKutuphane.Models.Entity
 @model List<TBLHAREKET>
+
 @{ ViewBag.Title = "Index";
                 Layout = "~/Views/Shared/Layout.cshtml"; }
+
 
 <h2>Ödünç Kitap Listesi</h2>
 
@@ -15,8 +17,11 @@
             <th>Personel</th>
             <th>Alış Tarihi</th>
             <th>İade Tarihi</th>
-            <th>İade Al</th>
-           
+            <th>Üye Teslim Tarihi</th>
+
+            <th>İşlem Durumu</th>
+            <th>İade Et</th>
+
 
         </tr>
     </thead>
@@ -33,10 +38,12 @@
     <td>@k.TBLPERSONEL.PERSONEL</td>
     <td>@Convert.ToDateTime(k.ALISTARIH).ToString("dd/MM/yyyy")</td>
     <td>@Convert.ToDateTime(k.IADETARIH).ToString("dd/MM/yyyy")</td>
+    <td>@Convert.ToDateTime(k.UYETESLIMTARIH).ToString("dd/MM/yyyy")</td>
+    <td>@k.ISLEMDURUM</td>
     <th><a href="/Odunc/OduncIade/@k.ID" class="btn btn-danger"> &nbsp;Kitabı iade Et</a></th>
-    
-</tr>}
 
+</tr>
+}
 
     </tbody>
 

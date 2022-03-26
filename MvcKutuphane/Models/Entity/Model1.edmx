@@ -36,6 +36,8 @@
           <Property Name="PERSONEL" Type="tinyint" />
           <Property Name="ALISTARIH" Type="smalldatetime" />
           <Property Name="IADETARIH" Type="smalldatetime" />
+          <Property Name="UYETESLIMTARIH" Type="smalldatetime" />
+          <Property Name="ISLEMDURUM" Type="bit" />
         </EntityType>
         <EntityType Name="TBLKASA">
           <Key>
@@ -95,32 +97,10 @@
           <Property Name="SOYAD" Type="varchar" MaxLength="50" />
           <Property Name="DETAY" Type="varchar" MaxLength="1000" />
         </EntityType>
-        <Association Name="FK_TBLCEZALAR_TBLHAREKET">
-          <End Role="TBLHAREKET" Type="Self.TBLHAREKET" Multiplicity="0..1" />
-          <End Role="TBLCEZALAR" Type="Self.TBLCEZALAR" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBLHAREKET">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="TBLCEZALAR">
-              <PropertyRef Name="HAREKET" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TBLCEZALAR_TBLUYELER">
-          <End Role="TBLUYELER" Type="Self.TBLUYELER" Multiplicity="0..1" />
-          <End Role="TBLCEZALAR" Type="Self.TBLCEZALAR" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBLUYELER">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="TBLCEZALAR">
-              <PropertyRef Name="UYE" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_TBLHAREKET_TBLKITAP">
-          <End Role="TBLKITAP" Type="Self.TBLKITAP" Multiplicity="0..1" />
+          <End Role="TBLKITAP" Type="Self.TBLKITAP" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="TBLHAREKET" Type="Self.TBLHAREKET" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TBLKITAP">
@@ -132,7 +112,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_TBLHAREKET_TBLPERSONEL">
-          <End Role="TBLPERSONEL" Type="Self.TBLPERSONEL" Multiplicity="0..1" />
+          <End Role="TBLPERSONEL" Type="Self.TBLPERSONEL" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="TBLHAREKET" Type="Self.TBLHAREKET" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TBLPERSONEL">
@@ -144,7 +126,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_TBLHAREKET_TBLUYELER">
-          <End Role="TBLUYELER" Type="Self.TBLUYELER" Multiplicity="0..1" />
+          <End Role="TBLUYELER" Type="Self.TBLUYELER" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="TBLHAREKET" Type="Self.TBLHAREKET" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TBLUYELER">
@@ -156,7 +140,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_TBLKITAP_TBLKATEGORI">
-          <End Role="TBLKATEGORI" Type="Self.TBLKATEGORI" Multiplicity="0..1" />
+          <End Role="TBLKATEGORI" Type="Self.TBLKATEGORI" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="TBLKITAP" Type="Self.TBLKITAP" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TBLKATEGORI">
@@ -168,7 +154,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_TBLKITAP_TBLYAZAR">
-          <End Role="TBLYAZAR" Type="Self.TBLYAZAR" Multiplicity="0..1" />
+          <End Role="TBLYAZAR" Type="Self.TBLYAZAR" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="TBLKITAP" Type="Self.TBLKITAP" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TBLYAZAR">
@@ -189,14 +177,6 @@
           <EntitySet Name="TBLPERSONEL" EntityType="Self.TBLPERSONEL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLUYELER" EntityType="Self.TBLUYELER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLYAZAR" EntityType="Self.TBLYAZAR" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_TBLCEZALAR_TBLHAREKET" Association="Self.FK_TBLCEZALAR_TBLHAREKET">
-            <End Role="TBLHAREKET" EntitySet="TBLHAREKET" />
-            <End Role="TBLCEZALAR" EntitySet="TBLCEZALAR" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TBLCEZALAR_TBLUYELER" Association="Self.FK_TBLCEZALAR_TBLUYELER">
-            <End Role="TBLUYELER" EntitySet="TBLUYELER" />
-            <End Role="TBLCEZALAR" EntitySet="TBLCEZALAR" />
-          </AssociationSet>
           <AssociationSet Name="FK_TBLHAREKET_TBLKITAP" Association="Self.FK_TBLHAREKET_TBLKITAP">
             <End Role="TBLKITAP" EntitySet="TBLKITAP" />
             <End Role="TBLHAREKET" EntitySet="TBLHAREKET" />
@@ -259,6 +239,8 @@
           <NavigationProperty Name="TBLKITAP" Relationship="Self.FK_TBLHAREKET_TBLKITAP" FromRole="TBLHAREKET" ToRole="TBLKITAP" />
           <NavigationProperty Name="TBLPERSONEL" Relationship="Self.FK_TBLHAREKET_TBLPERSONEL" FromRole="TBLHAREKET" ToRole="TBLPERSONEL" />
           <NavigationProperty Name="TBLUYELER" Relationship="Self.FK_TBLHAREKET_TBLUYELER" FromRole="TBLHAREKET" ToRole="TBLUYELER" />
+          <Property Name="UYETESLIMTARIH" Type="DateTime" Precision="0" />
+          <Property Name="ISLEMDURUM" Type="Boolean" DefaultValue="false" />
         </EntityType>
         <EntityType Name="TBLKASA">
           <Key>
@@ -351,8 +333,11 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_TBLHAREKET_TBLKITAP">
-          <End Role="TBLKITAP" Type="Self.TBLKITAP" Multiplicity="0..1" />
-          <End Role="TBLHAREKET" Type="Self.TBLHAREKET" Multiplicity="*" />
+          <End Role="TBLKITAP" Type="Self.TBLKITAP" Multiplicity="0..1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TBLHAREKET" Type="Self.TBLHAREKET" Multiplicity="*" >
+          </End>
           <ReferentialConstraint>
             <Principal Role="TBLKITAP">
               <PropertyRef Name="ID" />
@@ -481,6 +466,8 @@
           <EntitySetMapping Name="TBLHAREKET">
             <EntityTypeMapping TypeName="DBKUTUPHANEModel.TBLHAREKET">
               <MappingFragment StoreEntitySet="TBLHAREKET">
+                <ScalarProperty Name="ISLEMDURUM" ColumnName="ISLEMDURUM" />
+                <ScalarProperty Name="UYETESLIMTARIH" ColumnName="UYETESLIMTARIH" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="KITAP" ColumnName="KITAP" />
                 <ScalarProperty Name="UYE" ColumnName="UYE" />

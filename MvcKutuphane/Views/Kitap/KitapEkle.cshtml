@@ -1,4 +1,4 @@
-﻿@model MvcKutuphane.Models.Entity.TBLKITAP
+﻿ @model MvcKutuphane.Models.Entity.TBLKITAP
 @{
     ViewBag.Title = "KitapEkle";
     Layout = "~/Views/Shared/Layout.cshtml";
@@ -51,8 +51,12 @@
                 @Html.TextBoxFor(k => k.YAYINEVI, new { @class = "form-control" })
 
             </div>
+
+
         </div>
 
         <button class="btn btn-success"> KİTAP EKLE</button>
     </div>
+
+    <input type="hidden"  name="Durum" value="True"/>
 </form>
