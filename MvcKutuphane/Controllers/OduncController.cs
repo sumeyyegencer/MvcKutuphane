@@ -14,7 +14,7 @@ namespace MvcKutuphane.Controllers
         // GET: Odunc
         public ActionResult Index()
         {
-            var degerler = db.TBLHAREKET.ToList();
+            var degerler = db.TBLHAREKET.Where(x => x.ISLEMDURUM == false).ToList();
             return View(degerler);
         }
 

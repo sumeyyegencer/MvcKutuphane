@@ -136,6 +136,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IslemlerController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
     <Compile Include="Controllers\KitapController.cs" />
     <Compile Include="Controllers\OduncController.cs" />
@@ -276,6 +277,7 @@
     <Content Include="Views\Uye\UyeEkle.cshtml" />
     <Content Include="Views\Uye\UyeGetir.cshtml" />
     <Content Include="Views\Odunc\OduncIade.cshtml" />
+    <Content Include="Views\Islemler\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
