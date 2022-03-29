@@ -142,6 +142,7 @@
     <Compile Include="Controllers\OduncController.cs" />
     <Compile Include="Controllers\PersonelController.cs" />
     <Compile Include="Controllers\UyeController.cs" />
+    <Compile Include="Controllers\VitrinController.cs" />
     <Compile Include="Controllers\YazarController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -204,6 +205,21 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\PagedList.css" />
+    <Content Include="Content\vitrinTemp\startbootstrap-freelancer-gh-pages\assets\favicon.ico" />
+    <Content Include="Content\vitrinTemp\startbootstrap-freelancer-gh-pages\assets\img\a2.jpg" />
+    <Content Include="Content\vitrinTemp\startbootstrap-freelancer-gh-pages\assets\img\avataaars.svg" />
+    <Content Include="Content\vitrinTemp\startbootstrap-freelancer-gh-pages\assets\img\bg3.jpg" />
+    <Content Include="Content\vitrinTemp\startbootstrap-freelancer-gh-pages\assets\img\bg4.jpg" />
+    <Content Include="Content\vitrinTemp\startbootstrap-freelancer-gh-pages\assets\img\portfolio\cabin.png" />
+    <Content Include="Content\vitrinTemp\startbootstrap-freelancer-gh-pages\assets\img\portfolio\cake.png" />
+    <Content Include="Content\vitrinTemp\startbootstrap-freelancer-gh-pages\assets\img\portfolio\circus.png" />
+    <Content Include="Content\vitrinTemp\startbootstrap-freelancer-gh-pages\assets\img\portfolio\game.png" />
+    <Content Include="Content\vitrinTemp\startbootstrap-freelancer-gh-pages\assets\img\portfolio\lib4.png" />
+    <Content Include="Content\vitrinTemp\startbootstrap-freelancer-gh-pages\assets\img\portfolio\safe.png" />
+    <Content Include="Content\vitrinTemp\startbootstrap-freelancer-gh-pages\assets\img\portfolio\submarine.png" />
+    <Content Include="Content\vitrinTemp\startbootstrap-freelancer-gh-pages\css\styles.css" />
+    <Content Include="Content\vitrinTemp\startbootstrap-freelancer-gh-pages\index.html" />
+    <Content Include="Content\vitrinTemp\startbootstrap-freelancer-gh-pages\js\scripts.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -278,6 +294,7 @@
     <Content Include="Views\Uye\UyeGetir.cshtml" />
     <Content Include="Views\Odunc\OduncIade.cshtml" />
     <Content Include="Views\Islemler\Index.cshtml" />
+    <Content Include="Views\Vitrin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

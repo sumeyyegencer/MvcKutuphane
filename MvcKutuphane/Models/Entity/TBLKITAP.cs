@@ -43,6 +43,8 @@ public partial class TBLKITAP
 
     public Nullable<bool> DURUM { get; set; }
 
+    public string KITAPRESIM { get; set; }
+
 
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
