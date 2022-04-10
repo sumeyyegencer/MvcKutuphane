@@ -50,6 +50,10 @@ public partial class DBKUTUPHANEEntities : DbContext
 
     public virtual DbSet<TBLYAZAR> TBLYAZAR { get; set; }
 
+    public virtual DbSet<TBLHAKKIMIZDA> TBLHAKKIMIZDA { get; set; }
+
+    public virtual DbSet<TBLILETISIM> TBLILETISIM { get; set; }
+
 }
 
 }
