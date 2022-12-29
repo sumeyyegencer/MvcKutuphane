@@ -207,6 +207,11 @@
     <Content Include="Content\assets\bg4.jpg" />
     <Content Include="Content\assets\bg5.jpg" />
     <Content Include="Content\assets\bg6.jpg" />
+    <Content Include="Content\assets\ktp1.jpg" />
+    <Content Include="Content\assets\ktp2.jpg" />
+    <Content Include="Content\assets\ktp3.jpg" />
+    <Content Include="Content\assets\ktp4.jpg" />
+    <Content Include="Content\assets\ktp6.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -3892,6 +3897,13 @@
     <Content Include="Content\web2\resimler\book5.jpg" />
     <Content Include="Content\web2\resimler\img1.jpg" />
     <Content Include="Content\web2\w3layouts-License.txt" />
+    <Content Include="Content\webhava\css\style.css" />
+    <Content Include="Content\webhava\images\bg.jpg" />
+    <Content Include="Content\webhava\images\img1.jpg" />
+    <Content Include="Content\webhava\index.html" />
+    <Content Include="Content\webhava\js\jquery-2.1.4.min.js" />
+    <Content Include="Content\webhava\js\skycons.js" />
+    <Content Include="Content\webhava\w3layouts-License.txt" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -8954,6 +8966,9 @@
     <Content Include="Views\Istatistik\Index.cshtml" />
     <Content Include="Views\Shared\panelLayout.cshtml" />
     <Content Include="Views\Panel\Index.cshtml" />
+    <Content Include="Views\Istatistik\Hava.cshtml" />
+    <Content Include="Views\Istatistik\HavaKart.cshtml" />
+    <Content Include="Views\Istatistik\Galeri.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

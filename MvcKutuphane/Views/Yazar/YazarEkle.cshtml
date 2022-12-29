@@ -15,6 +15,7 @@
 
                 <label>Yazar Adı:</label>
                 @Html.TextBoxFor(y => y.AD, new { @class = "form-control" })
+                @Html.ValidationMessageFor(y => y.AD)
 
 
             </div>
@@ -22,6 +23,7 @@
 
                 <label>Yazar Soyadı:</label>
                 @Html.TextBoxFor(y => y.SOYAD, new { @class = "form-control" })
+                @Html.ValidationMessageFor(y=> y.SOYAD)
 
             </div>
         </div>
