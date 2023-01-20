@@ -11,5 +11,6 @@ namespace MvcKutuphane.Models.Classes
 
         public IEnumerable<TBLKITAP> Deger1 { get; set; }
         public IEnumerable<TBLHAKKIMIZDA> Deger2 { get; set; }
+     
     }
 }
