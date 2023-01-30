@@ -143,6 +143,7 @@
     <Compile Include="Controllers\KitapController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OduncController.cs" />
+    <Compile Include="Controllers\OgrenciPanelController.cs" />
     <Compile Include="Controllers\PanelController.cs" />
     <Compile Include="Controllers\PersonelController.cs" />
     <Compile Include="Controllers\UyeController.cs" />
@@ -3920,6 +3921,10 @@
     <Content Include="Content\webregister\images\bg.jpg" />
     <Content Include="Content\webregister\index.html" />
     <Content Include="Content\webregister\w3layouts-License.txt" />
+    <Content Include="Content\ögrenciPaneliTema\startbootstrap-simple-sidebar-gh-pages\assets\favicon.ico" />
+    <Content Include="Content\ögrenciPaneliTema\startbootstrap-simple-sidebar-gh-pages\css\styles.css" />
+    <Content Include="Content\ögrenciPaneliTema\startbootstrap-simple-sidebar-gh-pages\index.html" />
+    <Content Include="Content\ögrenciPaneliTema\startbootstrap-simple-sidebar-gh-pages\js\scripts.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -9007,6 +9012,8 @@
     <Content Include="Views\Istatistik\LinqKartlar.cshtml" />
     <Content Include="Views\Login\GirisYap.cshtml" />
     <Content Include="Views\KayıtOl\Kayıt.cshtml" />
+    <Content Include="Views\Shared\ogrenciPanelLayout.cshtml" />
+    <Content Include="Views\OgrenciPanel\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
